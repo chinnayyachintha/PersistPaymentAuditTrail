@@ -45,51 +45,51 @@ resource "aws_dynamodb_table" "payment_audit_trail" {
 
   # Global Secondary Indexes (GSI)
   global_secondary_index {
-    name               = "TransactionID-Index"
-    hash_key           = "TransactionID"
-    projection_type    = "ALL"
-    read_capacity      = 5
-    write_capacity     = 5
+    name            = "TransactionID-Index"
+    hash_key        = "TransactionID"
+    projection_type = "ALL"
+    read_capacity   = 5
+    write_capacity  = 5
   }
 
   global_secondary_index {
-    name               = "Action-Index"
-    hash_key           = "Action"
-    projection_type    = "ALL"
-    read_capacity      = 5
-    write_capacity     = 5
+    name            = "Action-Index"
+    hash_key        = "Action"
+    projection_type = "ALL"
+    read_capacity   = 5
+    write_capacity  = 5
   }
 
   global_secondary_index {
-    name               = "Timestamp-Index"
-    hash_key           = "Timestamp"
-    projection_type    = "ALL"
-    read_capacity      = 5
-    write_capacity     = 5
+    name            = "Timestamp-Index"
+    hash_key        = "Timestamp"
+    projection_type = "ALL"
+    read_capacity   = 5
+    write_capacity  = 5
   }
 
   global_secondary_index {
-    name               = "Actor-Index"
-    hash_key           = "Actor"
-    projection_type    = "ALL"
-    read_capacity      = 5
-    write_capacity     = 5
+    name            = "Actor-Index"
+    hash_key        = "Actor"
+    projection_type = "ALL"
+    read_capacity   = 5
+    write_capacity  = 5
   }
 
   global_secondary_index {
-    name               = "QueryDetails-Index"
-    hash_key           = "QueryDetails"
-    projection_type    = "ALL"
-    read_capacity      = 5
-    write_capacity     = 5
+    name            = "QueryDetails-Index"
+    hash_key        = "QueryDetails"
+    projection_type = "ALL"
+    read_capacity   = 5
+    write_capacity  = 5
   }
 
   global_secondary_index {
-    name               = "Response-Index"
-    hash_key           = "Response"
-    projection_type    = "ALL"
-    read_capacity      = 5
-    write_capacity     = 5
+    name            = "Response-Index"
+    hash_key        = "Response"
+    projection_type = "ALL"
+    read_capacity   = 5
+    write_capacity  = 5
   }
 
   tags = {
