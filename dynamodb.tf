@@ -6,6 +6,11 @@ resource "aws_dynamodb_table" "payment_audit_trail" {
   read_capacity  = 5
   write_capacity = 5
 
+  # Enable Point-in-Time Recovery (PITR)
+  point_in_time_recovery {
+    enabled = true
+  }
+  
   hash_key = "AuditID"
 
   attribute {
